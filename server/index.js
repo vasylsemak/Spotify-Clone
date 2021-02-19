@@ -33,11 +33,11 @@ app.use((req, res, next) => {
 })
 
 // Sends our index.html (the "single page" of our SPA)
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'client', 'index.html'))
 })
 
-// Two temporary routes to serve up our HTML mocks
+// Two temporary routes to serve up our HTML mockss
 // We'll remove these when we're done
 app.get('/mock-1', (req, res, next) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'juke-mock-1.html'))
